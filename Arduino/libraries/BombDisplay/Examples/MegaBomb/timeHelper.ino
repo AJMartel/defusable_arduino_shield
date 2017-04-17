@@ -28,10 +28,6 @@ void setupRTC() {
 
 /* methods that update stuff etc */
 
-void updateDisplay() {
-  updateCountDown();
-}
-
 void updateCountDown() {
   if (millis() > (secTimer + updateSpeed)) {
     secTimer = millis();

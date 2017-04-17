@@ -9,7 +9,9 @@
      J.A. Korten
      April 7, 2017
      V1.0
-
+     April 17, 2017
+     V1.1
+     
      Example for the use of the BombDisplay Library
 
      Defusable Alarm Clock - www.jksoftedu.nl
@@ -31,7 +33,7 @@
 RTC_DS3231 rtc;
 
 boolean _colon = false;
-BombDisplay bombDisplay = BombDisplay(0x73);
+
 
 int countDown = 1234;
 int updateSpeed = 1000; // 1000 for update per second, 100 for update per millisecond
@@ -39,6 +41,8 @@ boolean useSoundFeedback = false;
 unsigned long startCountDown = 0;
 int shakeDelay = 5000; // default
 boolean countingDown = false;
+
+BombDisplay bombDisplay = BombDisplay(0x73);
 
 void setup () {
   setupLeds();
@@ -79,10 +83,7 @@ void setupSerial() {
   Serial.begin(9600);
 }
 
-void setupDisplay() {
-  Wire.begin();
-  bombDisplay.initDisplay();
-}
+
 
 
 void doCountDown() {
