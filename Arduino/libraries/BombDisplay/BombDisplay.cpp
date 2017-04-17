@@ -3,18 +3,21 @@
  *   J.A. Korten
  *   April 7, 2017
  *   Version 1.0
+ *   April 17, 2017
+ *   Version 1.1 -
  *
  *   BombDisplay.cpp
  *
  *   Defusable Alarm Clock - www.jksoftedu.nl
  *
  *   Inspired by the HT16K33 library from Limor Fried/Ladyada/Adafruit Industries.
- *   MIT license, all text above must be included in any redistribution
  *
  *   The Defusable Alarm Clock uses a:
  *   4 digits 7-segment display with four decimal points, a colon and apostrophe
  *   common anode
  *   HT16K33 address (standard with solderjumpers open): 0x73
+ *
+ *   MIT license, all text above must be included in any redistribution
  */
 
 #include <Wire.h>
@@ -35,35 +38,35 @@ uint16_t commas[4] = {0, 0, 0, 0};
 boolean apostrophe = false;
 
 const uint16_t bombclocktable[15] = {
-  0b0011111100000,
-  0b0000011000000,
-  0b0101101100000,
-  0b0100111100000,
-  0b0110011000000,
-  0b0110110100000,
-  0b0111110100000,
-  0b0000011100000,
-  0b0111111100000,
-  0b0110111100000,
-  0b1000000000000,
-  0b0100000000000,
-  0b0000000001000,
-  0b0000000010000
+  0b0000011111100000,
+  0b0000000011000000,
+  0b0000101101100000,
+  0b0000100111100000,
+  0b0000110011000000,
+  0b0000110110100000,
+  0b0000111110100000,
+  0b0000000011100000,
+  0b0000111111100000,
+  0b0000110111100000,
+  0b0001000000000000,
+  0b0000100000000000,
+  0b0000000000001000,
+  0b0000000000010000
 };
 
-// 0: 0b0011111100000
-// 1: 0b0000011000000
-// 2: 0b0101101100000
-// 3: 0b0100111100000
-// 4: 0b0110011000000
-// 5: 0b0110110100000
-// 6: 0b0111110100000
-// 7: 0b0000011100000
-// 8: 0b0111111100000
-// 9: 0b0110111100000
-// .: 0b1000000000000 dec. punt
-// :: 0b0000000001000 colon    displaybuffer[1]
-// ': 0b0000000010000 apostrof displaybuffer[2]
+// 0: 0b0000 0111 1110 0000
+// 1: 0b0000 0000 1100 0000
+// 2: 0b0000 1011 0110 0000
+// 3: 0b0000 1001 1110 0000
+// 4: 0b0000 1001 1110 0000
+// 5: 0b0000 1101 1010 0000
+// 6: 0b0000 1111 1010 0000
+// 7: 0b0000 0000 1110 0000
+// 8: 0b0000 1111 1110 0000
+// 9: 0b0001 0000 0000 0000
+// .: 0b0000 1000 0000 0000 dec. punt
+// :: 0b0000 0000 0000 1000 colon displaybuffer[1]
+// ': 0b0000 0000 0001 0000 apostrof displaybuffer[2]
 
 
 BombDisplay::BombDisplay(uint8_t i2c_addr) {
@@ -117,7 +120,7 @@ void BombDisplay::blinkRate(uint8_t b) {
 }
 
 void BombDisplay::setTime(byte hours, byte minutes) {
-
+  // ToDo
 }
 
 void BombDisplay::writeBuffer() {
