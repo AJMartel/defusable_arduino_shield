@@ -16501,7 +16501,7 @@ Source: http://www.mouser.com/ds/2/392/products_18-2245.pdf</description>
 <part name="D3" library="adafruit" deviceset="DIODE" device="SOD-323F" value="1N4148"/>
 <part name="R28" library="resistor" deviceset="R-EU_" device="R0603" value="47K"/>
 <part name="R29" library="resistor" deviceset="R-EU_" device="R0603" value="47K"/>
-<part name="HT16K33" library="microbuilder" deviceset="HT16K33_SOP28" device=""/>
+<part name="HT16K33" library="microbuilder" deviceset="HT16K33_SOP28" device="" value="HT16K33"/>
 <part name="GND1" library="supply1" deviceset="GND" device=""/>
 <part name="A2" library="microbuilder" deviceset="SOLDERJUMPER" device="REFLOW_NOPASTE"/>
 <part name="R30" library="resistor" deviceset="R-EU_" device="R0603" value="47K"/>

@@ -173,7 +173,7 @@ Shield for Arduino</text>
 <text x="50.546" y="11.43" size="1.778" layer="121" font="vector" rot="R90" align="center">A</text>
 <text x="39.243" y="11.43" size="1.778" layer="121" font="vector" rot="R270" align="center">B</text>
 <text x="28.067" y="11.43" size="1.778" layer="121" font="vector" rot="R270" align="center">C</text>
-<text x="66.04" y="25.654" size="0.8128" layer="121" font="vector" rot="R90" align="center">v1.2 March 2017</text>
+<text x="66.04" y="25.654" size="0.8128" layer="121" font="vector" rot="R90" align="center">v1.3 April 2017</text>
 <text x="60.96" y="29.21" size="1.9304" layer="121" font="vector" rot="R270" align="center">J.A. Korten
 jksoftedu.nl</text>
 <text x="57.023" y="18.669" size="1.27" layer="121" font="vector" rot="R90" align="center">Tilt</text>
@@ -3495,7 +3495,12 @@ design rules under a new name.</description>
 <wire x1="33.782" y1="17.78" x2="34.036" y2="17.78" width="0.254" layer="1"/>
 <wire x1="34.036" y1="17.78" x2="34.29" y2="18.034" width="0.254" layer="1"/>
 <wire x1="41" y1="2.5" x2="40.64" y2="2.54" width="0.1524" layer="16"/>
-<wire x1="8.255" y1="11.17" x2="7.808" y2="5.969" width="0" layer="19" extent="16-16"/>
+<wire x1="8.255" y1="11.17" x2="8.255" y2="12.319" width="0.254" layer="16"/>
+<wire x1="8.255" y1="12.319" x2="7.874" y2="12.7" width="0.254" layer="16"/>
+<wire x1="7.874" y1="12.7" x2="6.858" y2="12.7" width="0.254" layer="16"/>
+<wire x1="6.858" y1="12.7" x2="6.731" y2="12.827" width="0.254" layer="16"/>
+<via x="6.731" y="12.827" extent="1-16" drill="0.3048"/>
+<wire x1="6.731" y1="12.827" x2="6.731" y2="13.081" width="0.254" layer="1"/>
 </signal>
 <signal name="SCL">
 <contactref element="R15" pad="2"/>
